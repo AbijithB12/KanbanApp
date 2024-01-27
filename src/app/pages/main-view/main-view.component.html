@@ -1,0 +1,47 @@
+<div class="navbar">
+    <div class="brand">
+        <a href="#"><h1>Kanban</h1></a>
+    </div>
+</div>
+<div>
+    <div class="row" cdkDropListGroup>
+        
+            <div class="col" 
+                cdkDropList
+                [cdkDropListData]="todo"
+                (cdkDropListDropped)="drop($event)">
+                <h3>Planned</h3>    
+                <ul class="lists">
+                    @for (item of todo;track todo){
+                        <li cdkDrag>{{item}}</li>
+                }
+                </ul>
+            </div>
+        
+        
+            <div class="col"
+                cdkDropList
+                [cdkDropListData]="done"
+                (cdkDropListDropped)="drop($event)">
+                <h3>To-do</h3>
+                <ul class="lists">
+                    @for (item of done;track done){
+                        <li cdkDrag>{{item}}</li>
+                }
+                </ul>
+            </div>
+        
+        <div class="col"><h3>In-Progress</h3>
+            <ul class="lists">
+                
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Validated</h3>
+            <ul class="lists">
+            </ul>
+        </div>
+        
+
+    </div>
+</div>

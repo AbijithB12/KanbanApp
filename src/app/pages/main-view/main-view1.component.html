@@ -1,0 +1,41 @@
+<div class="navbar">
+    <div class="brand">Kanban Board</div>
+</div>
+<hr>
+<hr>
+<p class="desc">Please enter your task :</p>
+<input (keyup.enter)="onClick(enterTask.value)" id="enter-task" #enterTask type="text" value="Check the email" placeholder="Enter Tasks">
+
+<div class="container">
+    <div class="row" cdkDropListGroup>
+        <div class="col"
+        cdkDropList
+        [cdkDropListData]="Backlog"
+        (cdkDropListDropped)="drop($event)">
+            <h3>Backlog</h3>
+            <div class="list" cdkDrag *ngFor="let task of Backlog">{{task}}</div>
+        </div>
+        <div class="col"
+        cdkDropList
+        [cdkDropListData]="Doing"
+        (cdkDropListDropped)="drop($event)">
+            <h3>Doing</h3>
+            <div class="list" cdkDrag *ngFor="let task of Doing ">{{task}}</div>    
+        </div>
+        <div class="col"
+        cdkDropList
+        [cdkDropListData]="Review"
+        (cdkDropListDropped)="drop($event)">
+            <h3>Review</h3>
+            <div class="list" cdkDrag *ngFor="let task of Review ">{{task}}</div>
+               
+        </div>
+        <div class="col"
+        cdkDropList
+        [cdkDropListData]="Done"
+        (cdkDropListDropped)="drop($event)">
+            <h3>Done</h3>
+            <div class="list" cdkDrag *ngFor="let task of Done ">{{task}}</div>
+        </div>
+    </div>
+</div>

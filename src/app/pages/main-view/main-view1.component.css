@@ -1,0 +1,44 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    height: 6vh ;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+#enter-task{
+    margin: 20px;
+}
+.col{
+    background-color: rgb(36, 72, 138);
+    gap: 2px;
+    height: 60vh;
+    margin:0px 10px;
+    padding: 10px;
+    width: 50%;
+    
+}
+.desc{
+    margin: 10px 0 0 0;
+}
+.row{
+    /* background-color: #004280; */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.list{
+    background-color: rgb(207, 208, 153);
+    display: flow-root;
+    margin: 6px;
+
+    
+}
